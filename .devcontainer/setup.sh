@@ -27,11 +27,12 @@ apt-get install -y \
     python3.10 python3.10-dev python3.10-distutils \
     python3.11 python3.11-dev python3.11-distutils \
     python3.12 python3.12-dev \
-    python3.13 python3.13-dev
+    python3.13 python3.13-dev \
+    python3.14 python3.14-dev
 
 # Install pip and ensure it's available for all Python versions
 echo "Setting up pip for all Python versions..."
-apt-get install -y python3-pip python3.9-venv python3.10-venv python3.11-venv python3.12-venv python3.13-venv
+apt-get install -y python3-pip python3.9-venv python3.10-venv python3.11-venv python3.12-venv python3.13-venv python3.14-venv
 python3 -m pip install --upgrade pip
 
 # Install pip for each Python version using get-pip.py
@@ -42,6 +43,7 @@ python3.10 get-pip.py --ignore-installed --break-system-packages
 python3.11 get-pip.py --ignore-installed --break-system-packages
 python3.12 get-pip.py --ignore-installed --break-system-packages
 python3.13 get-pip.py --ignore-installed --break-system-packages
+python3.14 get-pip.py --ignore-installed --break-system-packages
 rm get-pip.py
 
 # Make scripts executable

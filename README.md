@@ -6,8 +6,9 @@
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3130/)
+[![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/downloads/release/python-3140/)
 
-Production-ready Psycopg layers for AWS Lambda supporting Python 3.9 through 3.13.
+Production-ready Psycopg layers for AWS Lambda supporting Python 3.9 through 3.14.
 
 ## 🚀 Quick Start
 
@@ -22,16 +23,17 @@ Download the latest layer for your Python version:
 | 3.11 | [Download](https://github.com/serverlessia/lambda-psycopg-layer/releases/latest/download/python3.11-v1.zip) | `arn:aws:lambda:region:account:layer:psycopg-python311:1` |
 | 3.12 | [Download](https://github.com/serverlessia/lambda-psycopg-layer/releases/latest/download/python3.12-v1.zip) | `arn:aws:lambda:region:account:layer:psycopg-python312:1` |
 | 3.13 | [Download](https://github.com/serverlessia/lambda-psycopg-layer/releases/latest/download/python3.13-v1.zip) | `arn:aws:lambda:region:account:layer:psycopg-python313:1` |
+| 3.14 | [Download](https://github.com/serverlessia/lambda-psycopg-layer/releases/latest/download/python3.14-v1.zip) | `arn:aws:lambda:region:account:layer:psycopg-python314:1` |
 
 ### Upload to AWS Lambda
 
 ```bash
 # Upload layer to AWS Lambda
 aws lambda publish-layer-version \
-  --layer-name psycopg-python313 \
-  --description "Psycopg layer for Python 3.13" \
-  --zip-file fileb://python3.13-v1.zip \
-  --compatible-runtimes python3.13 \
+  --layer-name psycopg-python314 \
+  --description "Psycopg layer for Python 3.14" \
+  --zip-file fileb://python3.14-v1.zip \
+  --compatible-runtimes python3.14 \
   --compatible-architectures x86_64
 ```
 
@@ -84,7 +86,7 @@ def lambda_handler(event, context):
 | **Layer Size** | ~3.6MB (compressed) |
 | **Architecture** | x86_64 |
 | **PostgreSQL Support** | All PostgreSQL versions |
-| **Python Versions** | 3.9, 3.10, 3.11, 3.12, 3.13 |
+| **Python Versions** | 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 |
 | **Memory Usage** | ~171MB (uncompressed) |
 
 ## 🛠 Building from Source
@@ -111,7 +113,7 @@ cd lambda-psycopg-layer
 ### Build Single Version
 
 ```bash
-# Build for specific Python version (defaults to 3.13)
+# Build for specific Python version (defaults to 3.14)
 ./scripts/build.sh
 ```
 
@@ -140,6 +142,7 @@ Open in VS Code DevContainer for automatic multi-version building and testing:
 | **Python 3.11** | ✅ Working | Full Psycopg2 support |
 | **Python 3.12** | ✅ Working | Full Psycopg2 support |
 | **Python 3.13** | ✅ Working | Full Psycopg2 support |
+| **Python 3.14** | ✅ Working | Full Psycopg2 support |
 | **CI/CD** | ✅ Active | Automated builds and releases |
 | **DevContainer** | ✅ Ready | Multi-version support |
 

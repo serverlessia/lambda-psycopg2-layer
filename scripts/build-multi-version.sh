@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-PYTHON_VERSIONS=("3.9" "3.10" "3.11" "3.12" "3.13")
+PYTHON_VERSIONS=("3.9" "3.10" "3.11" "3.12" "3.13" "3.14")
 LAYER_NAME="psycopg-layer"
 
 echo "Building Psycopg Lambda Layers for multiple Python versions..."
